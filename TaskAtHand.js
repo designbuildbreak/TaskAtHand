@@ -36,18 +36,38 @@ $(document).ready(function(){
 				$("#app>footer").text(message);
 			};
 			
-			function addTaskElement(taskName)
+			function addTaskElement(taskName) //This function will add the user Input to the <span class="task-name"></span> element
+			{
+				
+				var $task = $("#task-template.task").clone();
+				$("span.task-name").append("<p>Hello</p>");
+				//$("span.task-name").append($task.text);
+				
+				//$("#task-list").append($task);				
+			};
+			
+			/* function addTaskElement(taskName)
 			{
 				var $task = $("<li></li>");
-				var $delete = $("<button class='delete'>Delete</button>");
-				//$("#task-list").append(($delete).append($task.text(taskName)));
-				$("#task-list").append(($task.text(taskName + " ")).append($delete));
+				var $delete = $("<button class='delete' style='display:inline;'>Delete</button>");
+				var $moveUp = $("<button class='move-up' style='display:inline;'>Move Up</button>");
+				var $moveDown = $("<button class='move-down' style='display:inline;'>Move Down</button>");
+				$("#task-list").append(($task.text(taskName + " ")).append($delete).append($moveUp).append($moveDown));
 				
 				$delete.click(function()
 				{
 					$task.remove();
 				});
-			};
+				$moveUp.click(function()
+				{
+					$task.insertBefore($task.prev());
+				});
+				$moveDown.click(function()
+				{
+					$task.insertAfter($task.next());
+				});
+				
+			}; */
 		};
 		
 		

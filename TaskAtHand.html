@@ -14,10 +14,22 @@
 					<label for="new-task-name">Add A Task:</label>
 					<input type="text" id="new-task-name" title="Enter a task name" placeholder="Enter a task name"/>
 				</div>
-				<ul id="task-list">
-				</ul>
+				<ul id="task-list"></ul>
 			</div>
 			<footer></footer>
 		<div>
+		<!-- <div id="templates" class="hidden"> -->
+		<div id="templates">
+			<ul id="task-template">
+				<li class="task">
+					<div class = "tools">
+						<button class="delete" title="Delete">Delete</button>
+						<button class="move-up" title="MoveUp">Move Up</button>
+						<button class="move-down" title="MoveDown">Move Down</button>
+					</div>
+					<span class="task-name">Task Name Goes Here</span>
+				</li>
+			</ul>
+		</div>
 	</body>
 </html>
