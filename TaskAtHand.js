@@ -37,13 +37,11 @@ $(document).ready(function(){
 			};
 			
 			function addTaskElement(taskName) //This function will add the user Input to the <span class="task-name"></span> element
-			{
-				
+			{				
 				var $task = $("#task-template.task").clone();
-				$("span.task-name").append("<p>Hello</p>");
-				//$("span.task-name").append($task.text);
-				
-				//$("#task-list").append($task);				
+				$("span.task-name").text(taskName);
+				$("#task-list").append("<p>" + $task + "</p>");
+						
 			};
 			
 			/* function addTaskElement(taskName)
